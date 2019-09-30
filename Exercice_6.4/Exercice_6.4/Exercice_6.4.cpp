@@ -2,6 +2,8 @@
 #include <vector>
 #include <algorithm>
 
+#define SIZE_MAX_BOARD 9;
+
 /*	Écrire une fonction void GenerateMap() qui remplit une fois la map avec un char pour représenter que les cases sont vide
 
 	Créer une fonction  ShowMap() qui affiche la carte à son état actuel
@@ -27,9 +29,16 @@ void Instructions()
 	std::cout << "Let the game begin!\n\n";
 }
 
-void GenerateMap() /*Vincent*/
+void GenerateMap(std::vector<char>& board) /*Vincent*/
 {
+	int SizeBoard = SIZE_MAX_BOARD;
 
+	board.resize(SizeBoard);
+
+	for (int i = 0; i < SizeBoard; i++)
+	{
+		board[i] = ' ';
+	}
 }
 
 void ShowMap() /*Vincent*/
@@ -54,8 +63,11 @@ void PlayGame() /* ? */
 
 int main()
 {
+	std::vector<char> board;
+
 	Instructions();
 
+	GenerateMap(board);
 
 
 	system("pause");
