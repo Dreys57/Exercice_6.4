@@ -41,9 +41,13 @@ void GenerateMap(std::vector<char>& board) /*Vincent*/
 	}
 }
 
-void ShowMap() /*Vincent*/
+void ShowMap(const std::vector<char>& board) /*Vincent*/
 {
-
+	std::cout << "\n\t" << board[0] << " | " << board[1] << " | " << board[2];
+	std::cout << "\n\t---------";
+	std::cout << "\n\t" << board[3] << " | " << board[4] << " | " << board[5];
+	std::cout << "\n\t---------";
+	std::cout << "\n\t" << board[6] << " | " << board[7] << " | " << board[8] << "\n\n";
 }
 
 void SetNewPosition() /*Gael*/
