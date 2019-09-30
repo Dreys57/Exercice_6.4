@@ -18,13 +18,13 @@
 
 void Instructions()
 {
-	std::cout << "\t Welcome to the Tic-Tac-Toe Game!\n\n\n";
+	std::cout << "\t\t\t\t\t Welcome to the Tic-Tac-Toe Game!\n\n\n";
 	std::cout << "You play by entering a number between 0 and 8 to decide the position you want to place your piece as shown by the grid below:\n\n";
-	std::cout << "0 | 1 | 2\n";
-	std::cout << "---------\n";
-	std::cout << "3 | 4 | 5\n";
-	std::cout << "---------\n";
-	std::cout << "6 | 7 | 8\n\n";
+	std::cout << "\t 0 | 1 | 2\n";
+	std::cout << "\t ---------\n";
+	std::cout << "\t 3 | 4 | 5\n";
+	std::cout << "\t ---------\n";
+	std::cout << "\t 6 | 7 | 8\n\n";
 
 	std::cout << "Let the game begin!\n\n";
 }
@@ -34,6 +34,8 @@ void GenerateMap(std::vector<char>& board) /*Vincent*/
 	int SizeBoard = SIZE_MAX_BOARD;
 
 	board.resize(SizeBoard);
+
+	Instructions();
 
 	for (int i = 0; i < SizeBoard; i++)
 	{
@@ -60,18 +62,27 @@ void CheckWin() /*Gael*/
 
 }
 
-void PlayGame() /* ? */
+void PlayGame(std::vector<char>& board) /* Vincent */
 {
+	bool winner = false;
 
+	while (!winner)
+	{
+		SetNewPosition();
+
+		ShowMap(board);
+
+		CheckWin();
+	}
 }
 
 int main()
 {
 	std::vector<char> board;
 
-	Instructions();
-
 	GenerateMap(board);
+
+	//PlayGame(board);
 
 
 	system("pause");
