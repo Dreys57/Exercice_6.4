@@ -39,7 +39,7 @@ void ShowMap(const std::vector<char>& board) /*Vincent*/
 	std::cout << "\n\t" << board[6] << " | " << board[7] << " | " << board[8] << "\n\n";
 }
 
-void SetNewPosition(std::vector<char>& board, char player)
+void SetNewPosition(std::vector<char>& board, char player) /*Gael*/
 {
 	int indexBoard = 0;
 	bool isLegal = false;  //this will determine if the case the player wants to place his piece is already taken or not
@@ -62,7 +62,7 @@ void SetNewPosition(std::vector<char>& board, char player)
 	}
 }
 
-void CheckWin(std::vector<char>& board, bool& winner, char player)
+void CheckWin(std::vector<char>& board, bool& winner, char player) /*Gael*/
 {
 	int isFull = 0;
 	//the next three variables will test every possibility of win by rows, colums and diagonal
