@@ -71,11 +71,11 @@ void CheckWin(std::vector<char>& board, bool& winner, char player)
 						|| (board[6] == player && board[7] == player && board[8] == player);
 
 	bool winningColumn = (board[0] == player && board[3] == player && board[6] == player)
-		|| (board[1] == player && board[4] == player && board[7] == player)
-		|| (board[2] == player && board[5] == player && board[8] == player);
+						|| (board[1] == player && board[4] == player && board[7] == player)
+						|| (board[2] == player && board[5] == player && board[8] == player);
 
 	bool winningDiagonal = (board[0] == player && board[4] == player && board[8] == player)
-		|| (board[2] == player && board[4] == player && board[6] == player);
+							|| (board[2] == player && board[4] == player && board[6] == player);
 
 	for (int i = 0; i < board.size(); i++)
 	{
